@@ -19,4 +19,14 @@ def quarter_of(month):
 # quarter_of(8) # => 3
 quarter_of(11) # => 4
 
+## GOLANG Solution ##
+
+func QuarterOf(month int) int {
+  quarter := month / 3
+  # because the divisor rounds to the floor number, I need to calculate the remainder
+  remainder := month % 3
+  if remainder > 0 { quarter += 1 }
+  return quarter
+}
+
 
