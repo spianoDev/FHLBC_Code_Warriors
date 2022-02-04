@@ -1,4 +1,4 @@
-# https://www.codewars.com/kata/5ce9c1000bab0b001134f5af/train/python
+# https://www.codewars.com/kata/5ce9c1000bab0b001134f5af
 # Level 8kyu
 
 ## Directions ##
@@ -21,12 +21,5 @@ quarter_of(11) # => 4
 
 ## GOLANG Solution ##
 
-func QuarterOf(month int) int {
-  quarter := month / 3
-  # because the divisor rounds to the floor number, I need to calculate the remainder
-  remainder := month % 3
-  if remainder > 0 { quarter += 1 }
-  return quarter
-}
 
 
