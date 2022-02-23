@@ -1,5 +1,5 @@
 # https://www.codewars.com/kata/56786a687e9a88d1cf00005d
-# Level 8kyu
+# Level 7kyu
 
 ## Directions ##
 
