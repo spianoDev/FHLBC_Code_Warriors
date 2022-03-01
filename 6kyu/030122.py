@@ -41,8 +41,6 @@ def find_senior(lst):
     return senior_devs
 
 
-
-
 ## Test Cases ##
 
 list1 = [
