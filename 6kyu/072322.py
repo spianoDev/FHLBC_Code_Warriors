@@ -18,21 +18,29 @@
 # result = 3 (3 red pairs)
 
 ## Function ##
+# def number_of_pairs(gloves):
+#     glove_sort = {}
+#     for glove in gloves:
+#         if glove in glove_sort:
+#             glove_sort[glove] += 1
+#         else:
+#             glove_sort[glove] = 1
+#     count = 0
+#     for key, value in glove_sort.items():
+#         count += value//2
+#     return count
+
+## second iteration ##
+
 def number_of_pairs(gloves):
-    glove_sort = {}
-    for glove in gloves:
-        if glove in glove_sort:
-            glove_sort[glove] += 1
-        else:
-            glove_sort[glove] = 1
-    count = 0
-    for key, value in glove_sort.items():
-        count += value//2
-    return count
+    glove_sort = set(gloves)
+    return sum(gloves.count(match)//2 for match in glove_sort)
+
+
 ## Test Cases ##
 
-# number_of_pairs(["red","red"]) # => 1
+number_of_pairs(["red","red"]) # => 1
 # number_of_pairs(["red","green","blue"]) # =>0
 # number_of_pairs(["gray","black","purple","purple","gray","black"]) # => 3
 # number_of_pairs([]) # => 0
-number_of_pairs(["red","green","blue","blue","red","green","red","red","red"]) # => 4
+# number_of_pairs(["red","green","blue","blue","red","green","red","red","red"]) # => 4
