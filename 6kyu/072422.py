@@ -30,7 +30,8 @@
 #
 # Note:
 # In the result codes and their values are in the same order as in M.
-
+import time
+start = time.time()
 ## Function ##
 def stock_list(listOfArt, listOfCat):
     all_items = []
@@ -52,10 +53,10 @@ def stock_list(listOfArt, listOfCat):
         answer += key + ' : ' + str(value) + ') - ('
 
     return answer[0:-4]
-## second iteration ##
-# def stock_list(listOfArt, listOfCat):
 
-
+end = time.time()
+total_time = end - start
+print(str(total_time))
 ## Test Cases ##
 
 b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
